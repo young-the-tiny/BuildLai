@@ -10,11 +10,11 @@
   <body>
     <!-- OVERLAY -->
     <div class="overlay" id="overlay"><div class="message_box">
-  <div class="overlay_header success">THÊM THÀNH CÔNG</div>
+  <div class="overlay_header success">ĐẶT HÀNG THÀNH CÔNG</div>
   <div class="overlay_desciption">
-  Bạn đã thêm sản phẩm thành công! Hãy kiểm tra ở mục "GIỎ HÀNG".
+    Kiểm tra thông tin đơn hàng trong mục "Đơn hàng của bạn".
   </div>
-  <button class="overlay_button success">ĐÃ HIỂU</button>
+  <button class="overlay_button success">ĐÓNG</button>
   </div></div>
     <div class="main">
       <!--         HEADER        -->
@@ -94,7 +94,6 @@
                     </svg>
                     <span>GIỎ HÀNG</span>
                   </a>
-              </li>
               <li class="bar-item" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
                   <path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"></path>
@@ -122,22 +121,22 @@
         <div class="content">
           <!-- Slider -->
           <div class="slide active">
-            <div class="slide-item" style="left: 0%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 0%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide1.jpg" alt="slide1">
             </div>
-            <div class="slide-item" style="left: 100%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 100%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide2.jpg" alt="slide2">
             </div>
-            <div class="slide-item" style="left: 200%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 200%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide3.jpg" alt="slide3">
             </div>
-            <div class="slide-item" style="left: 300%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 300%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide4.jpg" alt="slide4">
             </div>
-            <div class="slide-item" style="left: 400%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 400%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide5.jpg" alt="slide5">
             </div>
-            <div class="slide-item" style="left: 500%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 500%; transform: translateX(-300%);">
               <img src="./assets/img/slider/slide6.jpg" alt="slide6">
             </div>
           </div>
@@ -223,57 +222,23 @@
             <!-- GIỎ HÀNG -->
             <div class="cart-page">
               <!-- header cart -->
-              <header class="header-cart">
+              <header class="header-cart active">
                 <span>Tên sản phẩm</span>
                 <span>Số lượng</span>
                 <span>Giá bán</span>
                 <span>Tùy chỉnh</span>
               </header>
               <!-- content cart -->
-              <div class="cart-content"><div class="cart-item" data="0">
-      <div class="cart-product_info">
-        <div class="cart-product_img">
-          <img src="./assets/img/product/iphone8plus.jpg" alt="">
-        </div>
-        <div class="cart-product_name">
-          Iphone 8 Plus 128GB 99%
-        </div>
-      </div>
-  
-      <div class="cart-product_quanlity">
-        <input class="quanlity_product" id="quanlity_product" type="number" value="1" min="1" max="99">
-      </div>
-  
-      <div class="cart-product_price">
-        <span>3.590.000&nbsp;₫</span>
-      </div>
-  
-      <div class="cart-product_action">
-        <button onclick="deleteProduct(0)" class="cart_button">Delete</button>
-      </div>
-    </div><div class="cart-item" data="1">
-      <div class="cart-product_info">
-        <div class="cart-product_img">
-          <img src="./assets/img/product/iphone8.jpg" alt="">
-        </div>
-        <div class="cart-product_name">
-          Iphone 8 64GB LL/A
-        </div>
-      </div>
-  
-      <div class="cart-product_quanlity">
-        <input class="quanlity_product" id="quanlity_product" type="number" value="1" min="1" max="99">
-      </div>
-  
-      <div class="cart-product_price">
-        <span>2.990.000&nbsp;₫</span>
-      </div>
-  
-      <div class="cart-product_action">
-        <button onclick="deleteProduct(1)" class="cart_button">Delete</button>
-      </div>
-    </div></div>
-              <div class="checkout_form">
+              <div class="cart-content"><div class="no_product-cart">
+    <div class="no_product-img">
+      <img src="./assets/img/cart-img.png" alt="cart">
+    </div>
+    <h2 class="no_product-title">
+      KHÔNG CÓ SẢN PHẨM NÀO TRONG GIỎ HÀNG CỦA BẠN
+    </h2>
+    <a href="index.html" class="no_product-link">SHOPPING NGAY</a>
+  </div></div>
+              <div class="checkout_form active">
                 <form class="form_admin">
                   <h1>Điền thông tin</h1>
                   <div class="form_controll_admin">
@@ -302,9 +267,8 @@
                   </div>
                 </form>
               </div>
-              <div class="cart_place-order">
-                <div class="total_price"><span class="total">Tổng tiền:</span>
-                <span class="price">6.580.000&nbsp;₫</span></div>
+              <div class="cart_place-order active">
+                <div class="total_price"></div>
                 <button onclick="sendDataOrders()">THANH TOÁN</button>
               </div>
             </div>
@@ -323,6 +287,33 @@
           <div class="detail active"></div>
         </div>
       </div>
+      <!--         ADMIN PAGE        -->
+      <!-- <div class="admin_page">
+        <h1 class="title_page_admin" id="addAdminPage">TRANG ADMIN</h1>
+        <div class="logo_admin">
+          <img src="./assets/img/logo.png" alt="logo_admin_page" />
+        </div>
+        <div class="admin_content">
+          <ul class="navbar_admin">
+            <li class="nav_item_admin active" data="1">THÊM SẢN PHẨM</li>
+            <li class="nav_item_admin" data="2" id="deleteAdminPage">
+              XÓA SẢN PHẨM
+            </li>
+            <li class="nav_item_admin" data="3" id="updateAdminPage">
+              CHỈNH SỬA SẢN PHẨM
+            </li>
+            <li class="nav_item_admin" data="4" id="ordersAdminPage">
+              QUẢN LÝ ĐƠN HÀNG
+            </li>
+            <li class="nav_item_admin" data="5" id="userAdminPage">
+              QUẢN LÝ TÀI KHOẢN
+            </li>
+            <li class="nav_item_admin" data="6" id="sigoutAdmin">ĐĂNG XUẤT</li>
+          </ul>
+          <div class="container_admin"></div>
+        </div>
+      </div>
+    </div> -->
     <!--         FOOTER        -->
     <footer class="footer" id="footer">
       <div class="footer-content">
@@ -357,9 +348,4 @@
         </div>
       </div>
     </footer>
-    <script>
-      function sendDataOrders() {
-        window.location.href = 'muaHangSucess.html';
-      }
-    </script>
 </div></body></html>

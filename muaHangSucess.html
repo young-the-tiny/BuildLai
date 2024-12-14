@@ -9,12 +9,12 @@
   </head>
   <body>
     <!-- OVERLAY -->
-    <div class="overlay" id="overlay"><div class="message_box">
-  <div class="overlay_header success">THÊM THÀNH CÔNG</div>
+    <div class="overlay active" id="overlay"><div class="message_box">
+  <div class="overlay_header success">ĐẶT HÀNG THÀNH CÔNG</div>
   <div class="overlay_desciption">
-  Bạn đã thêm sản phẩm thành công! Hãy kiểm tra ở mục "GIỎ HÀNG".
+    Kiểm tra thông tin đơn hàng trong mục "Đơn hàng của bạn".
   </div>
-  <button class="overlay_button success">ĐÃ HIỂU</button>
+  <button class="overlay_button success">ĐÓNG</button>
   </div></div>
     <div class="main">
       <!--         HEADER        -->
@@ -76,24 +76,23 @@
       <span>Nhom20</span>
     </a></div>
             <ul class="bar-list">
-                <a class="bar-item" href="index_DN.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path>
-                    </svg>
-                    <span>TRANG CHỦ</span>
-                  </a>
-                  <a class="bar-item" href="product.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"></path>
-                    </svg>
-                    <span>SẢN PHẨM</span>
-                  </a>
-                  <a class="bar-item active" href="cart_DN.html"">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
-                    </svg>
-                    <span>GIỎ HÀNG</span>
-                  </a>
+              <li class="bar-item" onclick="handleSideBarHome()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path>
+                </svg>
+                <span>TRANG CHỦ</span>
+              </li>
+              <li class="bar-item" onclick="renderProductPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"></path>
+                </svg>
+                <span>SẢN PHẨM</span>
+              </li>
+              <li class="bar-item active" onclick="renderCartPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                </svg>
+                <span>GIỎ HÀNG</span>
               </li>
               <li class="bar-item" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
@@ -122,22 +121,22 @@
         <div class="content">
           <!-- Slider -->
           <div class="slide active">
-            <div class="slide-item" style="left: 0%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 0%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide1.jpg" alt="slide1">
             </div>
-            <div class="slide-item" style="left: 100%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 100%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide2.jpg" alt="slide2">
             </div>
-            <div class="slide-item" style="left: 200%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 200%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide3.jpg" alt="slide3">
             </div>
-            <div class="slide-item" style="left: 300%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 300%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide4.jpg" alt="slide4">
             </div>
-            <div class="slide-item" style="left: 400%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 400%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide5.jpg" alt="slide5">
             </div>
-            <div class="slide-item" style="left: 500%; transform: translateX(-100%);">
+            <div class="slide-item" style="left: 500%; transform: translateX(-500%);">
               <img src="./assets/img/slider/slide6.jpg" alt="slide6">
             </div>
           </div>
@@ -223,57 +222,23 @@
             <!-- GIỎ HÀNG -->
             <div class="cart-page">
               <!-- header cart -->
-              <header class="header-cart">
+              <header class="header-cart active">
                 <span>Tên sản phẩm</span>
                 <span>Số lượng</span>
                 <span>Giá bán</span>
                 <span>Tùy chỉnh</span>
               </header>
               <!-- content cart -->
-              <div class="cart-content"><div class="cart-item" data="0">
-      <div class="cart-product_info">
-        <div class="cart-product_img">
-          <img src="./assets/img/product/iphone8plus.jpg" alt="">
-        </div>
-        <div class="cart-product_name">
-          Iphone 8 Plus 128GB 99%
-        </div>
-      </div>
-  
-      <div class="cart-product_quanlity">
-        <input class="quanlity_product" id="quanlity_product" type="number" value="1" min="1" max="99">
-      </div>
-  
-      <div class="cart-product_price">
-        <span>3.590.000&nbsp;₫</span>
-      </div>
-  
-      <div class="cart-product_action">
-        <button onclick="deleteProduct(0)" class="cart_button">Delete</button>
-      </div>
-    </div><div class="cart-item" data="1">
-      <div class="cart-product_info">
-        <div class="cart-product_img">
-          <img src="./assets/img/product/iphone8.jpg" alt="">
-        </div>
-        <div class="cart-product_name">
-          Iphone 8 64GB LL/A
-        </div>
-      </div>
-  
-      <div class="cart-product_quanlity">
-        <input class="quanlity_product" id="quanlity_product" type="number" value="1" min="1" max="99">
-      </div>
-  
-      <div class="cart-product_price">
-        <span>2.990.000&nbsp;₫</span>
-      </div>
-  
-      <div class="cart-product_action">
-        <button onclick="deleteProduct(1)" class="cart_button">Delete</button>
-      </div>
-    </div></div>
-              <div class="checkout_form">
+              <div class="cart-content"><div class="no_product-cart">
+    <div class="no_product-img">
+      <img src="./assets/img/cart-img.png" alt="cart">
+    </div>
+    <h2 class="no_product-title">
+      KHÔNG CÓ SẢN PHẨM NÀO TRONG GIỎ HÀNG CỦA BẠN
+    </h2>
+    <a href="index.html" class="no_product-link">SHOPPING NGAY</a>
+  </div></div>
+              <div class="checkout_form active">
                 <form class="form_admin">
                   <h1>Điền thông tin</h1>
                   <div class="form_controll_admin">
@@ -302,9 +267,8 @@
                   </div>
                 </form>
               </div>
-              <div class="cart_place-order">
-                <div class="total_price"><span class="total">Tổng tiền:</span>
-                <span class="price">6.580.000&nbsp;₫</span></div>
+              <div class="cart_place-order active">
+                <div class="total_price"></div>
                 <button onclick="sendDataOrders()">THANH TOÁN</button>
               </div>
             </div>
@@ -323,6 +287,33 @@
           <div class="detail active"></div>
         </div>
       </div>
+      <!--         ADMIN PAGE        -->
+      <!-- <div class="admin_page">
+        <h1 class="title_page_admin" id="addAdminPage">TRANG ADMIN</h1>
+        <div class="logo_admin">
+          <img src="./assets/img/logo.png" alt="logo_admin_page" />
+        </div>
+        <div class="admin_content">
+          <ul class="navbar_admin">
+            <li class="nav_item_admin active" data="1">THÊM SẢN PHẨM</li>
+            <li class="nav_item_admin" data="2" id="deleteAdminPage">
+              XÓA SẢN PHẨM
+            </li>
+            <li class="nav_item_admin" data="3" id="updateAdminPage">
+              CHỈNH SỬA SẢN PHẨM
+            </li>
+            <li class="nav_item_admin" data="4" id="ordersAdminPage">
+              QUẢN LÝ ĐƠN HÀNG
+            </li>
+            <li class="nav_item_admin" data="5" id="userAdminPage">
+              QUẢN LÝ TÀI KHOẢN
+            </li>
+            <li class="nav_item_admin" data="6" id="sigoutAdmin">ĐĂNG XUẤT</li>
+          </ul>
+          <div class="container_admin"></div>
+        </div>
+      </div>
+    </div> -->
     <!--         FOOTER        -->
     <footer class="footer" id="footer">
       <div class="footer-content">
@@ -358,8 +349,8 @@
       </div>
     </footer>
     <script>
-      function sendDataOrders() {
-        window.location.href = 'muaHangSucess.html';
-      }
-    </script>
+      document.querySelector('.overlay_button').addEventListener('click', function(){
+        window.location.href = 'cart_DN_2.html';
+      });
+      </script>
 </div></body></html>
