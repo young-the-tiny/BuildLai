@@ -535,14 +535,35 @@ table button {
   display: none;
 }
 
+/* Dropdown và trạng thái mặc định */
 .verify_order {
-  color: red;
-  /* color: green; */
   font-weight: 600;
+  font-size: 16px; /* Kích thước chữ */
+  padding: 5px 10px; /* Khoảng cách bên trong */
+  border: 2px solid green; /* Viền mặc định */
+  border-radius: 5px; /* Bo góc */
+  background-color: white; /* Nền mặc định */
+  color: green; /* Màu mặc định là xanh */
+  transition: all 0.3s ease; /* Hiệu ứng mượt */
 }
+
+/* Trạng thái "Đã xác thực" */
 .verify_order.active {
+  border-color: green;
   color: green;
 }
+
+/* Trạng thái "Chưa xác thực" */
+.verify_order.inactive {
+  border-color: red;
+  color: red;
+}
+
+/* Hover thêm hiệu ứng */
+.verify_order:hover {
+  background-color: #f0f0f0;
+}
+
 
 .auth_order {
   font-size: 18px;
