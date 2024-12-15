@@ -1793,3 +1793,24 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   align-items: center;
 }
+
+
+.xyz {
+  margin-top: -200px; /* Có thể điều chỉnh lại */
+  text-align: center; /* Căn giữa */
+  position: relative; 
+}
+
+.xyz a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.xyz a:hover {
+  background-color: #ddd;
+}
