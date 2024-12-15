@@ -138,7 +138,7 @@
                 <span class="">14.890.000&nbsp;₫</span>
               </div>
               <div class="product-action">
-                <button class="detail-btn" data="11" onclick="detailProduct(12)">THÔNG TIN</button>
+                <button class="detail-btn" data="11" onclick="detailProduct()">THÔNG TIN</button>
                 <button class="addtocart-btn" data="11" onclick="addToCart()">THÊM GIỎ HÀNG</button>
               </div>
             </div>
@@ -152,7 +152,7 @@
                 <span class="">15.690.000&nbsp;₫</span>
               </div>
               <div class="product-action">
-                <button class="detail-btn" data="12" onclick="detailProduct(13)">THÔNG TIN</button>
+                <button class="detail-btn" data="12" onclick="detailProduct()">THÔNG TIN</button>
                 <button class="addtocart-btn" data="12" onclick="addToCart()">THÊM GIỎ HÀNG</button>
               </div>
             </div>
@@ -166,7 +166,7 @@
                 <span class="">18.690.000&nbsp;₫</span>
               </div>
               <div class="product-action">
-                <button class="detail-btn" data="13" onclick="detailProduct(14)">THÔNG TIN</button>
+                <button class="detail-btn" data="13" onclick="detailProduct()">THÔNG TIN</button>
                 <button class="addtocart-btn" data="13" onclick="addToCart()">THÊM GIỎ HÀNG</button>
               </div>
             </div>
@@ -271,5 +271,18 @@
     <a href="#">5</a>
     <a href="#">&raquo;</a>
 </div>
+<script>
+  document.querySelectorAll('.detail-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = 'ctsp.html';
+    });
+  });
+
+  document.querySelectorAll('.addtocart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = 'themHangFail.html';
+    });
+  });
+</script>
 </body>
 </html>
