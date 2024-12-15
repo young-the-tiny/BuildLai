@@ -28,16 +28,20 @@
             <div class="classification_select classification_select-admin">
               <span class="classification_select-text">-- Mặc định --</span>
               <ul class="classification_option">
-                <li onclick="defaultClassification()">Mặc định</li>
-                <li onclick="handle128GB()">128GB</li>
-                <li onclick="handle64GB()">64GB</li>
-                <li onclick="handle99()">Máy 99%</li>
+                <li  onclick="overlayClose()">Mặc định</li>
+                <li onclick="overlayClose()">iPhone 8 Series</li>
+                <li onclick="overlayClose()">iPhone X/XS Series</li>
+                <li onclick="overlayClose()">iPhone 11 Series</li>
+                <li onclick="overlayClose()">iPhone 12 Series</li>
+                <li onclick="overlayClose()">iPhone 13 Series</li>
+                <li onclick="overlayClose()">iPhone 14 Series</li>
+                <li onclick="overlayClose()">iPhone 15 Series</li>
               </ul>
             </div>
           </div>
           <!-- 2. Nút thêm sản phẩm ở trang quản lí sản phẩm -->
           <div class="header_admin-page-btn">
-            <button id="addProductAdminBtn">Thêm sản phẩm</button>
+            <button id="addProductAdminBtn"  onclick="add()">Thêm sản phẩm</button>
           </div>
 
         </div>
@@ -53,7 +57,7 @@
             <!-- In admin.html, add the search bar above the product table -->
             <div class="admin_search">
             <input type="text" id="searchAdminInput" placeholder="Tìm kiếm sản phẩm...">
-            <button id="searchAdminBtn">Tìm kiếm</button>
+            <button id="searchAdminBtn" onclick="overlayClose()">Tìm kiếm</button>
           </div>
             <table id="table">
               <thead id="table_header">
@@ -208,7 +212,18 @@ function handleUpdateProductsAdmin() {
       // Chuyển hướng về trang QLDH_1.html
       window.location.href = "sua_sp.html";
   }
-
+  function handleDeleteProductsAdmin(){
+      // Chuyển hướng về trang QLDH_1.html
+      window.location.href = "xoa_sp.html";
+  }
+  function overlayClose() {
+      // Chuyển hướng về trang QLDH_1.html
+      window.location.href = "admin.html";
+  }
+  function add() {
+      // Chuyển hướng về trang QLDH _1.html
+      window.location.href = "them_sp.html";
+  }
 
     </script>
 
