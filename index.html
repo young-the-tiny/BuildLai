@@ -70,21 +70,13 @@
               </svg>
               <span>THÔNG TIN</span>
             </li>
-            <li class="bar-item" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
+            <li class="bar-item" onclick="alert('Gọi đến số 0123456789')">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z"></path>
               </svg>
               <span>LIÊN HỆ</span>
             </li>
           </ul>
-          <div class="bottom-bar active" onclick="handleSignOut()">
-            <a href="#" class="bar-item_link">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
-              </svg>
-              <span>ĐĂNG XUẤT</span>
-            </a>
-          </div>
         </div>
       </div>
       <!-- Content -->
@@ -120,10 +112,13 @@
             <div class="classification_select">
               <span id="classification_select-text">-- Phân loại theo --</span>
               <ul class="classification_option">
-                <a href="index.html">Giá tăng dần</a>
-                <a href="index.html">Giá giảm dần</a>
-                <a href="index.html">Dung lượng: 128GB</a>
-                <a href="index.html">Máy 99%</a>
+                <li><a href="product.html">iPhone 8 Series</a></li>
+                <li><a href="product.html">iPhone X/XS Series</a></li>
+                <li><a href="product.html">iPhone 11 Series</a></li>
+                <li><a href="product.html">iPhone 12 Series</a></li>
+                <li><a href="product.html">iPhone 13 Series</a></li>
+                <li><a href="product.html">iPhone 14 Series</a></li>
+                <li><a href="product.html">iPhone 15 Series</a></li>
               </ul>
             </div>
           </div>
@@ -187,7 +182,7 @@
   </div></div>
           <!-- PHÂN TRANG -->
           <div class="number_page">
-            <ul class="item-number_page"><li class="number active" onclick="changePage(1)">1</li><li class="number" onclick="changePage(2)">2</li><li class="number" onclick="changePage(3)">3</li><li class="number" onclick="changePage(4)">4</li><li class="number" onclick="changePage(5)">5</li><li class="number" onclick="changePage(6)">6</li><li class="next-product" onclick="changePage(2)">next</li></ul>
+            <ul class="item-number_page"><li class="number active" onclick="changePage()">1</li><li class="number" onclick="changePage()">2</li><li class="number" onclick="changePage()">3</li><li class="number" onclick="changePage()">4</li><li class="number" onclick="changePage()">5</li><li class="number" onclick="changePage()">6</li><li class="next-product" onclick="changePage()">next</li></ul>
           </div>
           <!-- GIỎ HÀNG -->
           <div class="cart-page active">
@@ -330,6 +325,11 @@
 function searchProduct() {
   window.location.href = 'KetQuaTK.html';
 }
+</script>
+<script>
+  function changePage(){
+    window.location.href = 'index_trang2.html';
+  }
 </script>
 </body></html>
 
