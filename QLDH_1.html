@@ -52,11 +52,38 @@
         <div class="container_admin">
           <!-- In admin.html, add the search bar above the product table -->
           <div class="admin_search">
-          <input type="text" id="searchAdminInput" placeholder="Tìm kiếm sản phẩm...">
-          <button id="searchAdminBtn">Tìm kiếm</button>
+            <div class="filter">
+              <!-- Chọn filter -->
+              <span>
+                  <input type="radio" name="chon" value="thoiGian" id="thoiGian" onclick="checkThoiGian()" checked>
+                  Lọc theo thời gian
+              </span>
+              <span>
+                  <input type="radio" name="chon" value="tinhTrang" id="tinhTrang" onclick="checkTinhTrang()">
+                  Lọc theo trạng thái
+              </span>
+          
+              <select name="loaiTinhTrang" id="loaiTinhTrang">
+                  <option value="daNhan">Đã xác thực</option>
+                  <option value="chuaNhan">Chưa xác thực</option>\
+              </select>
+              
+              <div class="date">
+                  <label for="start">Từ ngày: </label>
+                  <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
+                  <label for="end">đến </label>
+                  <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
+              </div>
+              <a onclick="move()" class="thongKe">Lọc</a>
+
+              
+          </div>
+          
         </div>
           <table id="table">
             <thead id="table_header">
+
+              
   <tr>
     <th>Mã đơn hàng</th>
     <th>Tên tài khoản</th>
@@ -576,7 +603,7 @@
 <tbody id="tbody_ordersPage">
   <tr>
       <td><span class="codeID_order">3UFrr0pG</span></td>
-      <td><span class="username_order">a</span></td>
+      <td><span class="username_order">Thầy Thanh Đẹp Trai</span></td>
       <td>
           <!-- Dropdown để chọn trạng thái xác thực -->
           <select class="verify_order active" onchange="updateVerification(this)" data="3UFrr0pG">
@@ -584,12 +611,85 @@
               <option value="false">Chưa xác thực</option>
           </select>
       </td>
-      <td><span class="orderTime_order">19:49 14-12-2024</span></td>
-      <td><span class="totalPrice_order">2.990.000&nbsp;₫</span></td>
+      <td><span class="orderTime_order">9:49 15-12-2024</span></td>
+      <td><span class="totalPrice_order">3.990.000&nbsp;₫</span></td>
       <td>
-          <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail(this)">Xem chi tiết</span>
+          <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail()">Xem chi tiết</span>
       </td>
   </tr>
+
+
+  <tr>
+    <td><span class="codeID_order">3231faas</span></td>
+    <td><span class="username_order">Thầy Thanh Số 1</span></td>
+    <td>
+        <!-- Dropdown để chọn trạng thái xác thực -->
+        <select class="verify_order active" onchange="updateVerification(this)" data="3UFrr0pG">
+            <option value="true" selected>Đã xác thực</option>
+            <option value="false">Chưa xác thực</option>
+        </select>
+    </td>
+    <td><span class="orderTime_order">19:49 14-12-2024</span></td>
+    <td><span class="totalPrice_order">2.990.000&nbsp;₫</span></td>
+    <td>
+        <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail()">Xem chi tiết</span>
+    </td>
+</tr>
+
+
+<tr>
+  <td><span class="codeID_order">d2dasdUF</span></td>
+  <td><span class="username_order">Thầy Thanh VIP</span></td>
+  <td>
+      <!-- Dropdown để chọn trạng thái xác thực -->
+      <select class="verify_order active" onchange="updateVerification(this)" data="3UFrr0pG">
+          <option value="true" selected>Đã xác thực</option>
+          <option value="false">Chưa xác thực</option>
+      </select>
+  </td>
+  <td><span class="orderTime_order">20:49 14-5-2024</span></td>
+  <td><span class="totalPrice_order">7.990.000&nbsp;₫</span></td>
+  <td>
+      <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail()">Xem chi tiết</span>
+  </td>
+</tr>
+
+
+<tr>
+  <td><span class="codeID_order">213s3UFr</span></td>
+  <td><span class="username_order">Thầy Thanh Pro</span></td>
+  <td>
+      <!-- Dropdown để chọn trạng thái xác thực -->
+      <select class="verify_order active" onchange="updateVerification(this)" data="3UFrr0pG">
+          <option value="true" selected>Đã xác thực</option>
+          <option value="false">Chưa xác thực</option>
+      </select>
+  </td>
+  <td><span class="orderTime_order">19:49 19-12-2024</span></td>
+  <td><span class="totalPrice_order">24.990.000&nbsp;₫</span></td>
+  <td>
+      <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail()">Xem chi tiết</span>
+  </td>
+</tr>
+
+
+<tr>
+  <td><span class="codeID_order">zxcz3UFr</span></td>
+  <td><span class="username_order">Thầy Thanh 10Đ</span></td>
+  <td>
+      <!-- Dropdown để chọn trạng thái xác thực -->
+      <select class="verify_order active" onchange="updateVerification(this)" data="3UFrr0pG">
+          <option value="true" selected>Đã xác thực</option>
+          <option value="false">Chưa xác thực</option>
+      </select>
+  </td>
+  <td><span class="orderTime_order">18:49 12-12-2024</span></td>
+  <td><span class="totalPrice_order">2.990.000&nbsp;₫</span></td>
+  <td>
+      <span data="3UFrr0pG" class="detail_order" id="detail_order" onclick="viewOrderDetail()">Xem chi tiết</span>
+  </td>
+</tr>
+
 </tbody>
 
 
@@ -598,6 +698,11 @@
   function overlayClose() {
       // Chuyển hướng về trang QLDH_1.html
       window.location.href = "chitiet_dh.html";
+  }
+
+  function viewOrderDetail() {
+      // Chuyển hướng về trang QLDH_1.html
+      window.location.href = "xem_chi_tiet_dh.html";
   }
 
 // Hàm cập nhật trạng thái xác thực
@@ -622,11 +727,38 @@ function updateVerification(element) {
     console.log(`Đơn hàng ${orderID} đã chuyển trạng thái: ${isVerified ? "Đã xác thực" : "Chưa xác thực"}`);
 }
 
-// Hàm hiển thị chi tiết đơn hàng
-function viewOrderDetail(element) {
-    const orderID = element.getAttribute("data");
-    window.location.href = `chitiet_donhang.html?orderID=${orderID}`;
+window.onload = function () {
+    document.getElementById("thoiGian").checked = true; // Mặc định chọn lọc theo thời gian
+    document.querySelector('.date').style.display = 'block'; // Hiển thị phần lọc theo thời gian
+    document.getElementById('loaiTinhTrang').style.display = 'none'; // Ẩn phần lọc theo tình trạng
+};
+
+// Hàm xử lý khi chọn lọc theo thời gian
+function checkThoiGian() {
+    document.querySelector('.date').style.display = 'block'; // Hiển thị phần lọc theo thời gian
+    document.getElementById('loaiTinhTrang').style.display = 'none'; // Ẩn phần lọc theo tình trạng
 }
+
+// Hàm xử lý khi chọn lọc theo tình trạng
+function checkTinhTrang() {
+    document.querySelector('.date').style.display = 'none'; // Ẩn phần lọc theo thời gian
+    document.getElementById('loaiTinhTrang').style.display = 'block'; // Hiển thị phần lọc theo tình trạng
+}
+
+// Hàm di chuyển tới liên kết khi bấm nút Thống kê
+// Hàm di chuyển tới liên kết khi bấm nút Thống kê
+// Hàm di chuyển tới liên kết khi bấm nút Thống kê
+function move() {
+    // Kiểm tra xem người dùng có chọn lọc theo thời gian hay không
+    if (document.getElementById("thoiGian").checked) {
+        // Nếu đang chọn lọc theo thời gian
+        window.location.href = "loctheothoigian.html"; // Chuyển hướng đến trang lọc theo thời gian
+    } else if (document.getElementById("tinhTrang").checked) {
+        // Nếu đang chọn lọc theo tình trạng
+        window.location.href = "loctheotinhtrang1.html"; // Chuyển hướng đến trang lọc theo tình trạng
+    }
+  }
+
 
 </script>
 
