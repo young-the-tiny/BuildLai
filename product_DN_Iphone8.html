@@ -16,7 +16,7 @@
         <a class="header_logo" href="index.html">
           <img src="./assets/img/logo.png" alt="logo" class="logo_img">
         </a>
-        <div class="search">
+        <div class="search" onclick="searchProduct()">
           <input type="text" name="search" id="search" placeholder="Nhập sản phẩm bạn muốn tìm..." class="search_input">
           <div class="search_icon">
             <span>
@@ -104,7 +104,7 @@
               </li>
             </ul>
             <div class="bottom-bar" onclick="handleSignOut()">
-              <a href="#" class="bar-item_link">
+              <a href="href" class="bar-item_link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
                 </svg>
@@ -118,29 +118,29 @@
           <div class="wrapper-product">
             
              <!-- Add brand categories -->
-      <div class="brand-categories">
-        <div class="category-item">
-          <a href="product_DN_Iphone8.html">iPhone 8 Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphonex">iPhone X/XS Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphone11">iPhone 11 Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphone12">iPhone 12 Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphone13">iPhone 13 Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphone14">iPhone 14 Series</a>
-        </div>
-        <div class="category-item">
-          <a href="#iphone15">iPhone 15 Series</a>
-        </div>
-      </div>
+             <div class="brand-categories">
+              <div class="category-item">
+                <a href="product_DN_Iphone8.html">iPhone 8 Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN_Iphone_X.html">iPhone X/XS Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN.html">iPhone 11 Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN.html">iPhone 12 Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN.html">iPhone 13 Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN.html">iPhone 14 Series</a>
+              </div>
+              <div class="category-item">
+                <a href="product_DN.html">iPhone 15 Series</a>
+              </div>
+            </div>
             <!-- HIỂN THỊ SẢN PHẨM -->
             <div class="product"><div class="product-item">
           <div class="product-img">
@@ -193,6 +193,11 @@
   }
   function addToCart() {
     window.location.href = "themHangSucess_Product.html";
+  }
+</script>
+<script>
+  function searchProduct() {
+    window.location.href = 'KetQuaTK_DN.html';
   }
 </script>
 </html>
