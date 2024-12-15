@@ -64,7 +64,7 @@
                     </svg>
                     <span>GIỎ HÀNG</span>
                   </a>
-                <li class="bar-item" onclick="alert('Bạn cần đăng nhập để xem thông tin')">
+              <li class="bar-item" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
                   <path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"></path>
                 </svg>
@@ -112,10 +112,10 @@
           </div>
 
           <!-- PRODUCT -->
-          <div class="wrapper-product active">
-            <h2 class="title-product">TRANG CHỦ</h2>
+          <div class="wrapper-product">
+            <h2 class="title-product">KẾT QUẢ TÌM KIẾM</h2>
             <!-- phân loại -->
-            <div class="classification">
+            <div class="classification active">
               <span class="classification_type">Phân loại</span>
               <div class="classification_select">
                 <span id="classification_select-text">-- Phân loại theo --</span>
@@ -129,64 +129,50 @@
             </div>
             <!-- HIỂN THỊ SẢN PHẨM -->
             <div class="product"><div class="product-item">
-      <div class="product-img">
-        <img src="./assets/img/product/iphone8.jpg" alt="">
-      </div>
-      <div class="product-detail">
-        <h3 class="product-name">Iphone 8 64GB LL/A</h3>
-        <div class="product-price">
-          <span class="">2.990.000&nbsp;₫</span>
-        </div>
-        <div class="product-action">
-          <button class="detail-btn" data="0">THÔNG TIN</button>
-          <button class="addtocart-btn" data="0">THÊM GIỎ HÀNG</button>
-        </div>
-      </div>
-    </div><div class="product-item">
-      <div class="product-img">
-        <img src="./assets/img/product/iphone8plus.jpg" alt="">
-      </div>
-      <div class="product-detail">
-        <h3 class="product-name">Iphone 8 Plus 128GB 99%</h3>
-        <div class="product-price">
-          <span class="">3.590.000&nbsp;₫</span>
-        </div>
-        <div class="product-action">
-          <button class="detail-btn" data="1">THÔNG TIN</button>
-          <button class="addtocart-btn" data="1">THÊM GIỎ HÀNG</button>
-        </div>
-      </div>
-    </div><div class="product-item">
-      <div class="product-img">
-        <img src="./assets/img/product/iphonex.jpg" alt="">
-      </div>
-      <div class="product-detail">
-        <h3 class="product-name">Iphone X 256GB 99%</h3>
-        <div class="product-price">
-          <span class="">5.290.000&nbsp;₫</span>
-        </div>
-        <div class="product-action">
-          <button class="detail-btn" data="2">THÔNG TIN</button>
-          <button class="addtocart-btn" data="2">THÊM GIỎ HÀNG</button>
-        </div>
-      </div>
-    </div><div class="product-item">
-      <div class="product-img">
-        <img src="./assets/img/product/iphonexs.jpg" alt="">
-      </div>
-      <div class="product-detail">
-        <h3 class="product-name">Iphone XS 512GB 99%</h3>
-        <div class="product-price">
-          <span class="">5.890.000&nbsp;₫</span>
-        </div>
-        <div class="product-action">
-          <button class="detail-btn" data="3">THÔNG TIN</button>
-          <button class="addtocart-btn" data="3">THÊM GIỎ HÀNG</button>
-        </div>
-      </div>
-    </div></div>
+            <div class="product-img">
+              <img src="./assets/img/product/iphone13.jpg" alt="">
+            </div>
+            <div class="product-detail">
+              <h3 class="product-name">Iphone 13 128GB 99%</h3>
+              <div class="product-price">
+                <span class="">14.890.000&nbsp;₫</span>
+              </div>
+              <div class="product-action">
+                <button class="detail-btn" data="11" onclick="detailProduct(12)">THÔNG TIN</button>
+                <button class="addtocart-btn" data="11" onclick="addToCart()">THÊM GIỎ HÀNG</button>
+              </div>
+            </div>
+          </div><div class="product-item">
+            <div class="product-img">
+              <img src="./assets/img/product/iphone13pro.jpg" alt="">
+            </div>
+            <div class="product-detail">
+              <h3 class="product-name">Iphone 13 Pro 128GB 95%</h3>
+              <div class="product-price">
+                <span class="">15.690.000&nbsp;₫</span>
+              </div>
+              <div class="product-action">
+                <button class="detail-btn" data="12" onclick="detailProduct(13)">THÔNG TIN</button>
+                <button class="addtocart-btn" data="12" onclick="addToCart()">THÊM GIỎ HÀNG</button>
+              </div>
+            </div>
+          </div><div class="product-item">
+            <div class="product-img">
+              <img src="./assets/img/product/iphone13promax.jpg" alt="">
+            </div>
+            <div class="product-detail">
+              <h3 class="product-name">Iphone 13 Pro Max 256GB 95%</h3>
+              <div class="product-price">
+                <span class="">18.690.000&nbsp;₫</span>
+              </div>
+              <div class="product-action">
+                <button class="detail-btn" data="13" onclick="detailProduct(14)">THÔNG TIN</button>
+                <button class="addtocart-btn" data="13" onclick="addToCart()">THÊM GIỎ HÀNG</button>
+              </div>
+            </div>
+          </div></div>
             <!-- PHÂN TRANG -->
-            <div class="number_page">
+            <div class="number_page active">
               <ul class="item-number_page"><li class="number active" onclick="changePage(1)">1</li><li class="number" onclick="changePage(2)">2</li><li class="number" onclick="changePage(3)">3</li><li class="number" onclick="changePage(4)">4</li><li class="number" onclick="changePage(5)">5</li><li class="number" onclick="changePage(6)">6</li><li class="next-product" onclick="changePage(2)">next</li></ul>
             </div>
             <!-- GIỎ HÀNG -->
@@ -236,7 +222,7 @@
             </div>
 
             <!-- ORDER -->
-            <div class="orders-page">
+            <div class="orders-page active">
               <!-- content  -->
               <div class="orders-content"></div>
               <div class="cart_place-order">
@@ -246,89 +232,7 @@
           </div>
 
           <!-- DETAIL PRODUCT -->
-          <div class="detail"><div class="wrapper_detail-top">
-  <div class="detail_image">
-    <img src="./assets/img/product/iphone8.jpg" alt="detail">
-  </div>
-  <div class="detail_action">
-    <h2 class="detail_header">Iphone 8 64GB LL/A</h2>
-    <div class="detail_price">
-      <div class="price-box">
-        <span class="price-title">mua ngay</span>
-        <span class="price">2.990.000&nbsp;₫</span>
-      </div>
-      <span>Or</span>
-      <div class="price-box">
-        <span class="price-title">trả trước từ</span>
-        <span class="price">2.745.000 ₫</span>
-    </div>
-    </div>
-    <div class="detail_btn">
-      <button class="detail_buy" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">MUA NGAY</button>
-      <div class="detail_form-buy">
-        <button class="detail_amortization" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">MUA TRẢ GÓP</button>
-        <button class="detail_card" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
-          TRẢ BẰNG THẺ</button>
-      </div>
-    </div>
-    <div class="detail_contact">
-      <p>Liên hệ hỗ trợ qua hotline</p>
-      <div class="detail_contact-info">
-        <span class="detail_phone">093 233 3233</span>
-        <span class="detail_calendar">T2 - T7 (8:00 - 22:00)</span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrapper_detail-bottom">
-  <h2>Thông tin sản phẩm</h2>
-  <div class="detail_info">
-    <span class="detail_item">
-      <p class="detail_item-left">Ngày sản xuất:</p>
-      <p class="detail_item-right">9/2017</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Ngày phát hành:</p>
-      <p class="detail_item-right">9/2017</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Công nghệ màn hình:</p>
-      <p class="detail_item-right">LED-backlit IPS LCD</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Kích thước:</p>
-      <p class="detail_item-right">150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in)</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Độ phân giải màn hình:</p>
-      <p class="detail_item-right">750 x 1334 pixels</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Phiên bản IOS:</p>
-      <p class="detail_item-right">14</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">CHIP:</p>
-      <p class="detail_item-right">Apple A11 Bionic 6 nhân</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">CPU:</p>
-      <p class="detail_item-right">Apple A11 Bionic 6 nhân</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">GPU:</p>
-      <p class="detail_item-right">Apple GPU 3 nhân</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Bộ nhớ: </p>
-      <p class="detail_item-right">64GB RAM 2GB</p>
-    </span>
-    <span class="detail_item">
-      <p class="detail_item-left">Pin:</p>
-      <p class="detail_item-right">1821 mAh </p>
-    </span>
-  </div>
-</div></div>
+          <div class="detail active"></div>
         </div>
       </div>
       <!--         ADMIN PAGE        -->
@@ -358,49 +262,14 @@
         </div>
       </div>
     </div> -->
-    <!--         FOOTER        -->
-    <footer class="footer" id="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="./assets/img/logo.png" alt="">
-        </div>
-
-        <ul class="footer-list">
-          <li class="footer-item">Terms of Service</li>
-          <li class="footer-item">Privacy Policy</li>
-          <li class="footer-item">Security</li>
-          <li class="footer-item">Sitemap</li>
-        </ul>
-
-        <div class="footer-contact">
-          <div class="footer-link">
-            <span>Contact with us: </span>
-          </div>
-          <ul class="footer-contact_icon">
-            <li class="contact_icon">
-              <i class="fa-brands fa-instagram"></i>
-            </li>
-            <li class="contact_icon">
-              <i class="fa-brands fa-facebook"></i>
-            </li>
-            <li class="contact_icon"><i class="fa-brands fa-twitter"></i></li>
-            <li class="contact_icon"><i class="fa-brands fa-github"></i></li>
-          </ul>
-          <div class="footer-license">
-            <span>@Nhom 20 2024</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="./assets/js/notification.js"></script>
-    <script src="./assets/js/render.js"></script>
-    <script src="./assets/js/orders.js"></script>
-    <script src="./assets/js/cart.js"></script>
-    <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/data/product.js"></script>
-    <script src="./assets/js/data/user.js"></script>
-    <script src="./assets/js/data/localStorage.js"></script>
-    <script src="./assets/js/slider.js"></script>
-    <script src="./assets/js/admin.js"></script>
-    <script src="./assets/js/index.js"></script>
-</div></body></html>s
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">&raquo;</a>
+</div>
+</body>
+</html>

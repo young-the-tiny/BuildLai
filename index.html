@@ -18,7 +18,7 @@
       </a>
       <div class="search">
         <input type="text" name="search" id="search" placeholder="Nhập sản phẩm bạn muốn tìm..." class="search_input">
-        <div class="search_icon">
+        <div class="search_icon" onclick="searchProduct()">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
@@ -64,7 +64,7 @@
               </svg>
               <span>GIỎ HÀNG</span>
             </a>
-            <li class="bar-item" onclick="notificationAdmin('CHỨC NĂNG CHƯA HOÀN THIỆN')">
+            <li class="bar-item" onclick="alert('Bạn cần đăng nhập để xem thông tin')">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
                 <path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"></path>
               </svg>
@@ -120,10 +120,10 @@
             <div class="classification_select">
               <span id="classification_select-text">-- Phân loại theo --</span>
               <ul class="classification_option">
-                <li onclick="sortProductEsc()">Giá tăng dần</li>
-                <li onclick="sortProductDesc()">Giá giảm dần</li>
-                <li onclick="sortProductType1()">Dung lượng: 128GB</li>
-                <li onclick="sortProductType2()">Máy 99%</li>
+                <a href="index.html">Giá tăng dần</a>
+                <a href="index.html">Giá giảm dần</a>
+                <a href="index.html">Dung lượng: 128GB</a>
+                <a href="index.html">Máy 99%</a>
               </ul>
             </div>
           </div>
@@ -311,64 +311,25 @@
     </div>
   </footer>
   <script src="./assets/js/notification.js"></script>
-  <script src="./assets/js/render.js"></script>
-  <script src="./assets/js/orders.js"></script>
-  <script src="./assets/js/cart.js"></script>
-  <script src="./assets/js/search.js"></script>
-  <script src="./assets/js/data/product.js"></script>
-  <script src="./assets/js/data/user.js"></script>
-  <script src="./assets/js/data/localStorage.js"></script>
   <script src="./assets/js/slider.js"></script>
-  <script src="./assets/js/admin.js"></script>
-  <script src="./assets/js/index.js"></script>
-<!-- Code injected by live-server -->
+</div>
 <script>
-// <![CDATA[  <-- For SVG support
-if ('WebSocket' in window) {
-  (function () {
-    function refreshCSS() {
-      var sheets = [].slice.call(document.getElementsByTagName("link"));
-      var head = document.getElementsByTagName("head")[0];
-      for (var i = 0; i < sheets.length; ++i) {
-        var elem = sheets[i];
-        var parent = elem.parentElement || head;
-        parent.removeChild(elem);
-        var rel = elem.rel;
-        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-        }
-        parent.appendChild(elem);
-      }
-    }
-    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-    var address = protocol + window.location.host + window.location.pathname + '/ws';
-    var socket = new WebSocket(address);
-    socket.onmessage = function (msg) {
-      if (msg.data == 'reload') window.location.reload();
-      else if (msg.data == 'refreshcss') refreshCSS();
-    };
-    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-      console.log('Live reload enabled.');
-      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-    }
-  })();
-}
-else {
-  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-}
-// ]]>
+  document.querySelectorAll('.detail-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = 'ctsp.html';
+    });
+  });
+
+  document.querySelectorAll('.addtocart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = 'themHangFail.html';
+    });
+  });
 </script>
-
-
-</div><!-- Code injected by live-server -->
 <script>
-  document.querySelector('.detail-btn').addEventListener('click', function() {
-    window.location.href = 'ctsp.html';
-  });
-
-  document.querySelector('.addtocart-btn').addEventListener('click', function() {
-    window.location.href = 'themHangFail.html';
-  });
+function searchProduct() {
+  window.location.href = 'KetQuaTK.html';
+}
 </script>
 </body></html>
+

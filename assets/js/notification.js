@@ -40,9 +40,7 @@ function placeOrderNotification() {
 }
 
 // LOGIN SUCCESSFULLY
-function loginNotification(flag) {
-  overlay.classList.add("active");
-  if (flag) {
+function loginNotification() {
     const htmls = `<div class="message_box" style="height: 300px;
     padding: 10px 20x;
     display: flex;
@@ -52,16 +50,6 @@ function loginNotification(flag) {
   <div class="overlay_header success"  style="height: 100%; display: flex; align-items: center; justify-content: center;">ĐĂNG NHẬP THÀNH CÔNG</div>
   </div>`;
     overlay.innerHTML = htmls;
-  } else {
-    const htmls = `<div class="message_box" style="height: 300px;
-    padding: 10px 20x;
-    display: flex;
-    align-items: center;
-    justify-content: center;"
-    > <div class="overlay_header fail">ĐĂNG NHẬP THẤT BẠI</div>
-    </div>`;
-    overlay.innerHTML = htmls;
-  }
 }
 
 // REGISTER NOTIFICATION

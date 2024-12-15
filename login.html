@@ -69,10 +69,16 @@
       </div>
     </div>
 <script>
+  function loginNotification() {
+    alert('Login successful!');
+  }
+
   document.querySelector('.btn-login').addEventListener('click', function(event) {
     event.preventDefault();
+    loginNotification();
     window.location.href = 'index_DN.html';
   });
 </script>
+<script src="./assets/js/notification.js"></script>
   </body>
 </html>
