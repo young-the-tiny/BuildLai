@@ -628,3 +628,97 @@ table button {
   font-size: 16px;
   margin-left: 10px;
 }
+.filter{
+  margin: 10px auto;
+width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 16px;
+}
+
+.date input{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 3px;
+}
+
+.date span{
+  margin-right: 20px;
+}
+
+.show{
+  display: block;
+width: 100px;
+padding: 6px 7px ;
+  margin-left: 10px;
+text-align: center;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.show:hover {
+  background-color: #DCDCDC;
+  color: #333;
+}
+
+
+.filter{
+  margin: 10px auto;
+width: 90%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.filter input[type='radio'] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.filter span{
+  margin-right: 20px;
+}
+
+.filter input, select{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 3px;
+}
+
+.filter select{
+  width: 193px;
+display: none;
+}
+
+.filter .date{
+  margin-left: 20px;
+}
+.thongKe{
+  display: block;
+width: 100px;
+padding: 6px 7px ;
+  margin-left: 10px;
+text-align: center;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.thongKe:hover {
+  background-color: #DCDCDC;
+  color: #333;
+}
