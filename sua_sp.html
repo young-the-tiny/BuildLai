@@ -68,7 +68,7 @@
         <input required="" type="text" id="price_product_admin-update" value="Điện thoại này của thầy Thanh">
       </div>
 
-    <button class="submit_admin" id="admin_update" onclick="redirectToAdmin()">XÁC NHẬN</button>
+    <button class="submit_admin" id="admin_update" type="submit">XÁC NHẬN</button>
   </form></div>
     <div class="overlay_close" onclick="overlayClose()">×</div></div>
     <div class="main">
@@ -253,17 +253,11 @@ function overlayClose() {
   }
 
 
-  function redirectToAdmin() {
-    
+  document.querySelector('.form_admin').addEventListener('submit', function(event) {
+    event.preventDefault();
     alert("CHỈNH SỬA SẢN PHẨM THÀNH CÔNG");
-    
-    // Chuyển hướng đến trang admin.html
-    window.location.href = "./admin.html";
-  }
-
-
-
-
-    </script>
+    window.location.href = "admin.html";
+  });
+</script>
 
 </body></html>
