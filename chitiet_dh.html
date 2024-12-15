@@ -1,0 +1,656 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site bán hàng</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+  </head>
+  <body>
+    <!-- OVERLAY -->
+    <div class="overlay active" id="overlay">
+      <div class="overlay_detail_order" id="overlay_content"></div>
+    <div class="overlay_detail_order" id="overlay_detail_order-close">
+        <div class="orders_item-header">
+          <div class="orders_item-header-code">
+            Mã đơn hàng:
+            <p class="orders_item-header-code-text">3UFrr0pG</p>
+          </div>
+          <div class="orders_item-header-verify">
+            <span>Tình trạng đơn hàng:</span>
+            <span class="orders_item-header-verify-text active">Đã xác thực</span>
+          </div>
+        </div>
+        <div class="orders_item-content">
+        <div class="orders_item-products">
+          
+            <div class="orders_item-product-info">
+            <div class="orders_item-product-img-name">
+              <div class="orders_item-product_img">
+                <img src="./assets/img/product/iphone8.jpg" alt="Iphone 8 64GB LL/A">
+              </div>
+              <div class="orders_item-product_name">
+                <span>Iphone 8 64GB LL/A</span>
+                <p>x1</p>
+              </div>
+            </div>
+            <div class="orders_item-product_price">
+              <p>2.990.000&nbsp;₫</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+        <div class="orders_item-footer">
+          <div class="orders_item-footer_userInfo">
+            <h3>Thông tin người đặt</h3>
+            <ul>
+              <li>
+                Tên người nhận:
+                <p>a</p>
+              </li>
+              <li>
+                SĐT:
+                <p>0363296105</p>
+              </li>
+              <li>
+                Địa chỉ nhận hàng:
+                <p>
+                a
+                </p>
+              </li>
+              <li>
+                Ngày đặt hàng:
+                <p>19:49 14-12-2024</p>
+              </li>
+              <li>
+                Phương thức thanh toán:
+                <p>Thanh toán khi nhận hàng</p>
+              </li>
+            </ul>
+          </div>
+          <div class="orders_item-footer_total-price">
+            Thành tiền:
+            <span>2.990.000&nbsp;₫</span>
+          </div>
+        </div>
+       
+      </div><div class="overlay_close" onclick="overlayClose()">×</div></div>
+    <div class="main">
+      <div class="admin_page">
+        <h1 class="title_page_admin" id="addAdminPage">TRANG ADMIN</h1>
+        <div class="logo_admin">
+          <img src="./assets/img/logo.png" alt="logo_admin_page">
+        </div>
+        <div class="header_admin-page">
+          <!-- 1. Phân loại sản phẩm ở trang quản lí sản phẩm -->
+          <div class="header_admin-classification active">
+            <div class="classification_select classification_select-admin">
+              <span class="classification_select-text">-- Mặc định --</span>
+              <ul class="classification_option">
+                <li onclick="defaultClassification()">Mặc định</li>
+                <li onclick="handle128GB()">128GB</li>
+                <li onclick="handle64GB()">64GB</li>
+                <li onclick="handle99()">Máy 99%</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 2. Nút thêm sản phẩm ở trang quản lí sản phẩm -->
+          <div class="header_admin-page-btn active">
+            <button id="addProductAdminBtn">Thêm sản phẩm</button>
+          </div>
+
+        </div>
+        <div class="admin_content">
+          <ul class="navbar_admin">
+            <li class="nav_item_admin" data="1">QUẢN LÝ SẢN PHẨM</li>
+            <li class="nav_item_admin active" data="2" id="ordersAdminPage">QUẢN LÝ ĐƠN HÀNG</li>
+            <li class="nav_item_admin" data="3" id="userAdminPage">QUẢN LÝ TÀI KHOẢN</li>
+            <li class="nav_item_admin" data="4" id="statisticsPage">THỐNG KÊ</li>
+            <li class="nav_item_admin" data="5">ĐĂNG XUẤT</li>
+          </ul>
+          <div class="container_admin">
+            <!-- In admin.html, add the search bar above the product table -->
+            <div class="admin_search">
+            <input type="text" id="searchAdminInput" placeholder="Tìm kiếm sản phẩm...">
+            <button id="searchAdminBtn">Tìm kiếm</button>
+          </div>
+            <table id="table">
+              <thead id="table_header">
+    <tr>
+      <th>Mã đơn hàng</th>
+      <th>Tên tài khoản</th>
+      <th>Trạng thái</th>
+      <th>Thời điểm đặt hàng</th>
+      <th>Tổng tiền</th>
+      <th>Xem chi tiết</th>
+      <th>Thao tác</th>
+    </tr>
+  </thead>
+              <tbody id="tbody_addProduct" class="active">
+    <tr id="1">
+    <td>
+      <span>1</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone8.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 8 64GB LL/A</td>
+    <td>2.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="1" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="1" id="product_admin-delete">
+        <i data="1" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="2">
+    <td>
+      <span>2</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone8plus.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 8 Plus 128GB 99%</td>
+    <td>3.590.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="2" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="2" id="product_admin-delete">
+        <i data="2" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="3">
+    <td>
+      <span>3</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphonex.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone X 256GB 99%</td>
+    <td>5.290.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="3" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="3" id="product_admin-delete">
+        <i data="3" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="4">
+    <td>
+      <span>4</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphonexs.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone XS 512GB 99%</td>
+    <td>5.890.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="4" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="4" id="product_admin-delete">
+        <i data="4" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="5">
+    <td>
+      <span>5</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphonexsmax.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone XS MAX 64GB 99%</td>
+    <td>5.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="5" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="5" id="product_admin-delete">
+        <i data="5" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="6">
+    <td>
+      <span>6</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone11.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 11 128GB 95%</td>
+    <td>6.890.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="6" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="6" id="product_admin-delete">
+        <i data="6" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="7">
+    <td>
+      <span>7</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone11pro.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 11 Pro 64GB New</td>
+    <td>7.190.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="7" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="7" id="product_admin-delete">
+        <i data="7" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="8">
+    <td>
+      <span>8</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone11promax.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 11 Pro Max 64GB 99%</td>
+    <td>7.190.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="8" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="8" id="product_admin-delete">
+        <i data="8" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="9">
+    <td>
+      <span>9</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone12.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 12 128GB 99%</td>
+    <td>10.490.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="9" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="9" id="product_admin-delete">
+        <i data="9" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="10">
+    <td>
+      <span>10</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone12pro.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 12 Pro 128GB 95%</td>
+    <td>10.890.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="10" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="10" id="product_admin-delete">
+        <i data="10" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="11">
+    <td>
+      <span>11</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone12promax.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 12 Pro Max 128GB 95%</td>
+    <td>13.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="11" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="11" id="product_admin-delete">
+        <i data="11" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="12">
+    <td>
+      <span>12</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone13.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 13 128GB 99%</td>
+    <td>14.890.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="12" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="12" id="product_admin-delete">
+        <i data="12" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="13">
+    <td>
+      <span>13</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone13pro.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 13 Pro 128GB 95%</td>
+    <td>15.690.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="13" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="13" id="product_admin-delete">
+        <i data="13" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="14">
+    <td>
+      <span>14</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone13promax.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 13 Pro Max 256GB 95%</td>
+    <td>18.690.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="14" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="14" id="product_admin-delete">
+        <i data="14" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="15">
+    <td>
+      <span>15</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone14.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 14 256GB VN/A</td>
+    <td>17.190.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="15" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="15" id="product_admin-delete">
+        <i data="15" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="16">
+    <td>
+      <span>16</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone14plus.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 14 Plus 256GB VN/A</td>
+    <td>21.290.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="16" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="16" id="product_admin-delete">
+        <i data="16" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="17">
+    <td>
+      <span>17</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone14pro.jpeg" alt="">
+      </div>
+    </td>
+    <td>Iphone 14 Pro 256GB VN/A</td>
+    <td>22.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="17" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="17" id="product_admin-delete">
+        <i data="17" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="18">
+    <td>
+      <span>18</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone14promax.jpeg" alt="">
+      </div>
+    </td>
+    <td>Iphone 14 Pro Max 1TB VN/A</td>
+    <td>40.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="18" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="18" id="product_admin-delete">
+        <i data="18" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="19">
+    <td>
+      <span>19</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone15.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 15 256GB VN/A</td>
+    <td>29.900.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="19" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="19" id="product_admin-delete">
+        <i data="19" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="20">
+    <td>
+      <span>20</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone15plus.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 15 Plus 512GB VN/A</td>
+    <td>33.490.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="20" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="20" id="product_admin-delete">
+        <i data="20" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="21">
+    <td>
+      <span>21</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone15pro.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 15 Pro 128GB VN/A</td>
+    <td>33.490.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="21" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="21" id="product_admin-delete">
+        <i data="21" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    
+    <tr id="22">
+    <td>
+      <span>22</span>
+    </td>
+    <td>
+      <div class="product_img">
+        <img src="./assets/img/product/iphone15promax.jpg" alt="">
+      </div>
+    </td>
+    <td>Iphone 15 Pro Max 1TB VN/A</td>
+    <td>43.990.000&nbsp;₫</td>
+    <td>
+      <span id="product_admin-edit">
+        <i data="22" onclick="handleUpdateProductsAdmin(event)" class="fa-solid fa-pen-to-square"></i>
+      </span>
+    </td>
+    <td>
+      <span data="22" id="product_admin-delete">
+        <i data="22" onclick="handleDeleteProductsAdmin(event)" class="fa-regular fa-trash-can"></i>
+      </span>
+    </td>
+  </tr>
+    </tbody>
+              <tbody id="tbody_ordersPage"><tr><td><span class="codeID_order">3UFrr0pG</span></td><td><span class="username_order">a</span></td><td><span class="verify_order active">Đã xác thực</span></td><td><span class="orderTime_order">19:49 14-12-2024</span></td><td><span class="totalPrice_order">2.990.000&nbsp;₫</span></td><td><span data="3UFrr0pG" class="detail_order" id="detail_order">Xem chi tiết</span></td><td><span data="3UFrr0pG" id="verifyOrders" class="active"><i class="fa-regular fa-square-check auth_order active"></i></span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<script>
+    function overlayClose() {
+        // Chuyển hướng về trang QLDH_1.html
+        window.location.href = "QLDH_1.html";
+    }
+</script>
+</body></html>
