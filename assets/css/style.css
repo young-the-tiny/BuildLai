@@ -1814,3 +1814,22 @@ input[type="number"]::-webkit-inner-spin-button {
 .xyz a:hover {
   background-color: #ddd;
 }
+#cardForm {
+  margin-top: 20px;
+}
+
+#cardForm .form_controll_admin {
+  margin-bottom: 15px;
+}
+
+#cardForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#cardForm input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

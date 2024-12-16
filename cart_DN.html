@@ -121,44 +121,11 @@
         </div>
         <!-- Content -->
         <div class="content">
-          <!-- Slider -->
-          <div class="slide active">
-            <div class="slide-item" style="left: 0%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide1.jpg" alt="slide1">
-            </div>
-            <div class="slide-item" style="left: 100%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide2.jpg" alt="slide2">
-            </div>
-            <div class="slide-item" style="left: 200%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide3.jpg" alt="slide3">
-            </div>
-            <div class="slide-item" style="left: 300%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide4.jpg" alt="slide4">
-            </div>
-            <div class="slide-item" style="left: 400%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide5.jpg" alt="slide5">
-            </div>
-            <div class="slide-item" style="left: 500%; transform: translateX(-100%);">
-              <img src="./assets/img/slider/slide6.jpg" alt="slide6">
-            </div>
-          </div>
 
           <!-- PRODUCT -->
           <div class="wrapper-product">
             <h2 class="title-product">GIỎ HÀNG</h2>
-            <!-- phân loại -->
-            <div class="classification active">
-              <span class="classification_type">Phân loại</span>
-              <div class="classification_select">
-                <span id="classification_select-text">-- Phân loại theo --</span>
-                <ul class="classification_option">
-                  <li onclick="sortProductEsc()">Giá tăng dần</li>
-                  <li onclick="sortProductDesc()">Giá giảm dần</li>
-                  <li onclick="sortProductType1()">Dung lượng: 128GB</li>
-                  <li onclick="sortProductType2()">Máy 99%</li>
-                </ul>
-              </div>
-            </div>
+        
             <!-- HIỂN THỊ SẢN PHẨM -->
             <div class="product active"><div class="product-item">
       <div class="product-img">
@@ -295,12 +262,27 @@
                   <div class="form_radio-paymentMethod">
                     <h3>Phương thức thanh toán</h3>
                     <div class="credit_cart">
-                      <input type="radio" id="payment1" name="payment" value="Thanh toán khi nhận hàng">
+                      <input type="radio" id="payment1" name="payment" value="Thanh toán khi nhận hàng" onclick="toggleCardForm(false)">
                       <label for="payment1">Thanh toán khi nhận hàng</label><br>
-                      <input type="radio" id="paymemt2" name="payment" value="Thanh toán bằng thẻ tín dụng">
-                      <label for="paymemt2">Thanh toán bằng thẻ tín dụng</label>
+                      <input type="radio" id="payment2" name="payment" value="Thanh toán bằng thẻ tín dụng" onclick="toggleCardForm(true)">
+                      <label for="payment2">Thanh toán bằng thẻ tín dụng</label>
                     </div>
                   </div>
+                  <!-- New form for card information -->
+                <div id="cardForm" style="display: none;">
+                  <div class="form_controll_admin">
+                    <label for="card_number">Số thẻ:</label>
+                    <input type="text" id="card_number" placeholder="1234 5678 9012 3456">
+                  </div>
+                  <div class="form_controll_admin">
+                    <label for="expiry_date">Ngày hết hạn:</label>
+                    <input type="text" id="expiry_date" placeholder="MM/YY">
+                  </div>
+                  <div class="form_controll_admin">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="CVV">
+                  </div>
+                </div>
                 </form>
               </div>
               <div class="cart_place-order">
@@ -372,5 +354,17 @@
         function deleteProduct() {
           window.location.href = 'cart_Xoa_DN.html';
         }
+      </script>
+      <script>
+        function toggleCardForm(show) {
+          const cardForm = document.getElementById('cardForm');
+          if (show) {
+            cardForm.style.display = 'block';
+          } else {
+            cardForm.style.display = 'none';
+          }
+        }
       </script> 
-</div></body></html>
+</div>
+</body>
+</html>
