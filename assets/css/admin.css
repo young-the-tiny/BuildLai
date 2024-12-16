@@ -776,3 +776,48 @@ text-align: center;
   border-color: #007bff;
   outline: none;
 }
+
+
+/* Styles for timeFilter */
+.timeFilter {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+}
+
+.timeFilter h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.timeFilter-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeFilter-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeFilter-input label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timeFilter-input input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#filterBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#statisticsResults {
+  margin-top: 30px;
+}
