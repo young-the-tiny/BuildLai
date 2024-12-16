@@ -17,12 +17,37 @@
       <div class="overlay_detail_order" id="overlay_content">
           <form class="form_admin">
             <div class="form_controll_admin">
-              <label for="username_admin-update">Tên tài khoản</label>
-              <input required="" type="text" id="username_admin-update" value="a">
+              <label for="profile_image">Hình ảnh</label>
+              <input type="file" id="profile_image" name="profile_image" accept="image/*">
+              <img id="image_preview" src="./assets/img/user.jpg" alt="Hình ảnh người dùng" style="max-width: 150px; margin-bottom: 10px;">
             </div>
             <div class="form_controll_admin">
-              <label for="password_admin-update">Mật khẩu</label>
-              <input required="" type="password" id="password_admin-update" value="a">
+              <label for="username_admin-update">Loại người dùng</label>
+              <input  type="text" id="username_admin-update" value="Khách hàng">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Tên tài khoản</label>
+              <input type="text" id="password_admin-update" value="THAYTHANH10Đ">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Email</label>
+              <input  type="text" id="password_admin-update" value="THANHDEPTRAI@GMAIL.COM">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Số điện thoại</label>
+              <input  type="text" id="password_admin-update" value="0231312323">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Địa chỉ</label>
+              <input  type="text" id="password_admin-update" value="123 NGUYỄN VĂN CỪ">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Ngày Sinh</label>
+              <input  type="date" id="password_admin-update" value="a">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Mô tả</label>
+              <input  type="text" id="password_admin-update" value="KHÁCH HÀNG VIP CẦN CHĂM SÓC KỸ">
             </div>
             <button class="submit_admin" id="admin_update_user" type="submit">XÁC NHẬN</button>
           </form></div>
