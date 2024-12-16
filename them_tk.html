@@ -17,16 +17,40 @@
       <div class="overlay_detail_order" id="overlay_content">
       <form class="form_admin">
         <div class="form_controll_admin">
-          <label for="username_admin">Tên tài khoản</label>
-          <input  type="text" id="username_admin" placeholder="Nhập tên tài khoản...">
-        </div>
-        <div class="form_controll_admin">
-          <label for="password_admin">Mật khẩu</label>
-          <input type="password" id="password_admin" placeholder="Nhập mật khẩu...">
-        </div>
-        <button class="submit_admin" id="admin_add_user">THÊM</button>
-      </form>
-    </div>
+              <label for="profile_image">Hình ảnh</label>
+              <input type="file" id="profile_image" name="profile_image" accept="image/*">
+              
+            </div>
+            <div class="form_controll_admin">
+              <label for="username_admin-update">Loại người dùng</label>
+              <input  type="text" id="username_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Tên tài khoản</label>
+              <input type="text" id="password_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Email</label>
+              <input  type="text" id="password_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Số điện thoại</label>
+              <input  type="text" id="password_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Địa chỉ</label>
+              <input  type="text" id="password_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Ngày Sinh</label>
+              <input  type="date" id="password_admin-update" value="">
+            </div>
+            <div class="form_controll_admin">
+              <label for="password_admin-update">Mô tả</label>
+              <input  type="text" id="password_admin-update" value="">
+            </div>
+            <button class="submit_admin" id="admin_update_user" type="submit">XÁC NHẬN</button>
+          </form></div>
     <div class="overlay_close" onclick="overlayClose()">×</div><div class="overlay_close" onclick="overlayClose()">×</div></div>
     <div class="main">
       <div class="admin_page">
@@ -54,7 +78,7 @@
             <li class="nav_item_admin" data="5">ĐĂNG XUẤT</li>
           </ul>
           <div class="container_admin active">
-            <div class="item_user">
+            <div class="item_user"> 
                 <div class="user_img-admin">
                   <img src="./assets/img/user-login.jpg" alt="user_admin">
                 </div>
@@ -179,14 +203,14 @@
 
         function overlayClose() {
               // Chuyển hướng về trang QLDH_1.html
-              window.location.href = "admin.html";
+              window.location.href = "qltk.html";
           }
           
         
         
           document.querySelector('.form_admin').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert("THÊM SẢN PHẨM THÀNH CÔNG");
+            alert("THÊM TÀI KHOẢN THÀNH CÔNG");
             window.location.href = "qltk.html";
           });
             </script>
