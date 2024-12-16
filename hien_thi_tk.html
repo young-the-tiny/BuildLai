@@ -1,0 +1,222 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site bán hàng</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+  </head>
+  <body>
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay">
+      <div class="overlay_detail_order" id="overlay_content"></div>
+    </div>
+    <div class="main">
+      <div class="admin_page">
+        <h1 class="title_page_admin" id="addAdminPage">TRANG ADMIN</h1>
+        <div class="logo_admin">
+          <img src="./assets/img/logo.png" alt="logo_admin_page">
+        </div>
+        <div class="header_admin-page">
+          <!-- 1. Phân loại sản phẩm ở trang quản lí sản phẩm -->
+          <div class="header_admin-classification">
+     
+              
+             
+            </div>
+          </div>
+          <!-- 2. Nút thêm sản phẩm ở trang quản lí sản phẩm -->
+          
+
+        </div>
+        <div class="admin_content">
+          <ul class="navbar_admin">
+            <a href="admin.html" class="nav_item_admin " data="1">QUẢN LÝ SẢN PHẨM</a>
+            <a class="nav_item_admin" href="QLDH_1.html">QUẢN LÝ ĐƠN HÀNG</a>
+            <a class="nav_item_admin " data="3" id="userAdminPage" href="qltk.html">QUẢN LÝ TÀI KHOẢN</a>
+            <a href="thong_ke.html" class="nav_item_admin active" data="4" id="statisticsPage">THỐNG KÊ</a>
+            <a href="index.html" class="nav_item_admin" data="5">ĐĂNG XUẤT</a>
+          </ul>
+          <div class="container_admin">
+  <div class="timeFilter">
+    <h2>Thống kê Tình hình Kinh doanh</h2>
+    <div class="timeFilter-content">
+      <div class="timeFilter-input">
+        <label for="startDate">Ngày bắt đầu:</label>
+        <input type="date" id="startDate">
+      </div>
+      <div class="timeFilter-input">
+        <label for="endDate">Ngày kết thúc:</label>
+        <input type="date" id="endDate">
+      </div>
+      <button id="filterBtn" onclick="tk()">Lọc</button>
+    </div>
+    <div id="statisticsResults">
+    <h3>Kết quả thống kê từ 2024-02-16 đến 2024-12-24</h3>
+    <p>Tổng doanh thu: 350.050.000&nbsp;₫</p>
+
+    <h4>Danh sách Mặt hàng</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên Mặt hàng</th>
+          <th>Số lượng bán ra</th>
+          <th>Tổng doanh thu</th>
+          <th>Xem chi tiết</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>Iphone 8 64GB LL/A</td>
+            <td>14</td>
+            <td>2.990.000&nbsp;₫</td>
+            <td> <a href="xem_chi_tiet_mh.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>Iphone 8 Plus 128GB 99%</td>
+            <td>12</td>
+            <td>3.590.000&nbsp;₫</td>
+            <td> <a href="xem_chi_tiet_mh.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>Iphone X 256GB 99%</td>
+            <td>11</td>
+            <td>5.290.000&nbsp;₫</td>
+            <td> <a href="xem_chi_tiet_mh.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>Iphone XS MAX 64GB 99%</td>
+            <td>13</td>
+            <td>5.990.000&nbsp;₫</td>
+            <td> <a href="xem_chi_tiet_mh.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>Iphone 14 256GB VN/A</td>
+            <td>2</td>
+            <td>17.190.000&nbsp;₫</td>
+            <td> <a href="xem_chi_tiet_mh.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+      </tbody>
+    </table>
+
+    <h4>Top 5 Khách hàng mua nhiều nhất</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên khách hàng</th>
+          <th>Tổng chi tiêu</th>
+          <th>Xem hóa đơn</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>tuyen</td>
+            <td>28.470.000&nbsp;₫</td>
+            <td> <a href="hien_thi_nd.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>dsa</td>
+            <td>6.580.000&nbsp;₫</td>
+            <td> <a href="hien_thi_nd.html" class="detail_order">Xem</a></td>
+          </tr>
+
+          <tr>
+            <td>tuyen</td>
+            <td>283.470.000&nbsp;₫</td>
+            <td> <a href="hien_thi_nd.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          <tr>
+            <td>dsa</td>
+            <td>61.580.000&nbsp;₫</td>
+            <td> <a href="hien_thi_nd.html" class="detail_order">Xem</a></td>
+          </tr>
+
+          <tr>
+            <td>tuyen</td>
+            <td>2.470.000&nbsp;₫</td>
+            <td> <a href="hien_thi_nd.html" class="detail_order">Xem</a></td>
+          </tr>
+        
+          
+        
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/notification.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/orders.js"></script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/data/product.js"></script>
+    <script src="./assets/js/data/user.js"></script>
+    <script src="./assets/js/data/localStorage.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/admin.js"></script>
+    <script src="./assets/js/index.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+
+
+
+  function tk() {
+      // Chuyển hướng về trang QLDH_1.html
+      window.location.href = "hien_thi_tk.html";
+  }
+</script>
+
+
+</body></html>
